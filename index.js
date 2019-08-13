@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer-core');
- 
+ const _url = '';
+
 (async () => {
   const browser = await puppeteer.launch(
   {
@@ -11,9 +12,9 @@ const puppeteer = require('puppeteer-core');
   await page.goto('https://translate.google.com/#view=home&op=docs&sl=en&tl=fa');
 
   const input = await page.$('#tlid-file-input')
-  await input.uploadFile('C:/Users/e.lotfi/Desktop/pooop/translate.txt')
+  await input.uploadFile(_url_)
 
   await page.click('.tlid-translate-doc-button.button')
 
-  // await browser.close();
+   await browser.close();
 })();
